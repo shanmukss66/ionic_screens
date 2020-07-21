@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'otp',
+    loadChildren: () => import('./otp/otp.module').then( m => m.OtpPageModule)
+  },
+  {
+    path: 'track',
+    loadChildren: () => import('./track/track.module').then( m => m.TrackPageModule)
+  },
+  {
+    path: 'fulldetail',
+    loadChildren: () => import('./fulldetail/fulldetail.module').then( m => m.FulldetailPageModule)
+  },
 ];
 
 @NgModule({
